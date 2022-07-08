@@ -1,5 +1,7 @@
 # blog_app
 
+Тестовое приложение блога на Vue.js
+
 ## Project setup
 ```
 npm install

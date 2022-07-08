@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+        <div class="post" v-for="post in posts" :key="post.id">
+            <div><strong>Название: </strong>{{post.title}}</div>
+            <div><strong>Название: </strong>{{post.body}}</div>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    data() {
+        return {
+            posts: [
+                {id: 1, title: 'JavaScript', body : 'Описание поста'},
+                {id: 2, title: 'JavaScript 2', body : 'Описание поста 2'},
+                {id: 3, title: 'JavaScript 3', body : 'Описание поста 3'}
+            ]
+        }
+    }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.post {
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+
 }
 </style>
