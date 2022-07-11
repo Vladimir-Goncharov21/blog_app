@@ -3,32 +3,32 @@
         <h4>Создание поста</h4>
         <input v-model="post.title" class="input" type="text" placeholder="Название">
         <input v-model="post.body" class="input" type="text" placeholder="Описание">
-        <button class="btn" @click="createPost">
-            Создать
-        </button>
+        <default-button  @click="createPost">Создать</default-button>
     </form>
 </template>
 
 <script>
+import DefaultButton from './UI/DefaultButton'
 export default {
     data() {
         return {
             post: {
-                title: '',
-                body: ''
+                title: "",
+                body: ""
             }
-        }
+        };
     },
     methods: {
         createPost() {
-            this.post.id = Date.now()
-            this.$emit('create', this.post)
+            this.post.id = Date.now();
+            this.$emit("create", this.post);
             this.post = {
-                title: '',
-                body: ''
-            }
+                title: "",
+                body: ""
+            };
         }
-    }
+    },
+    components: { DefaultButton }
 }
 </script>
 
@@ -36,14 +36,5 @@ export default {
 form {
     display: flex;
     flex-direction: column;
-}
-
-.btn {
-    align-self: flex-end;
-    margin-top: 15px;
-    padding: 10px 15px;
-    background: none;
-    color: teal;
-    border: 1px solid teal;
 }
 </style>
