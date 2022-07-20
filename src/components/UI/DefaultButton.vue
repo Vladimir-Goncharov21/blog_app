@@ -1,5 +1,5 @@
 <template>
-    <button>
+    <button class="btn">
         <slot></slot>
     </button>
 </template>
@@ -9,11 +9,11 @@
 </script>
 
 <style scoped>
-button {
-    margin-top: 15px;
+.btn {
     padding: 10px 15px;
     background: none;
     color: teal;
     border: 1px solid teal;
+    align-self: flex-end;
 }
 </style>

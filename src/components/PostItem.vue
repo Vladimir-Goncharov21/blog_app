@@ -3,19 +3,23 @@
         <div><strong>Название: </strong>{{ post.title }}</div>
         <div><strong>Описание: </strong>{{ post.body }}</div>
         <div class = "post_btns">
-            <button>Удалить</button>
+            <default-button>Удалить</default-button>
         </div>
     </div>
 </template>
 
 <script>
+
+import DefaultButton from './UI/DefaultButton.vue'
+
 export default {
     props: {
         post: {
             type: Object,
             required: true
         }
-    }
+    },
+    components: { DefaultButton }
 }
 </script>
 

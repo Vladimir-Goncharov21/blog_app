@@ -3,12 +3,13 @@
         <h4>Создание поста</h4>
         <input v-model="post.title" class="input" type="text" placeholder="Название">
         <input v-model="post.body" class="input" type="text" placeholder="Описание">
-        <default-button  @click="createPost">Создать</default-button>
+        <default-button  @click="createPost" style="margin-top: 15px; align-self: flex-end;">Создать</default-button>
     </form>
 </template>
 
 <script>
-import DefaultButton from './UI/DefaultButton'
+import DefaultButton from './UI/DefaultButton.vue'
+
 export default {
     data() {
         return {
