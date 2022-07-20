@@ -6,9 +6,12 @@
 
 
 <script>
+export default {
+    name: 'default-button'
+}
 </script>
 
-<style scoped>
+<style>
 .btn {
     padding: 10px 15px;
     background: none;

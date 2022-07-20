@@ -10,16 +10,13 @@
 
 <script>
 
-import DefaultButton from './UI/DefaultButton.vue'
-
 export default {
     props: {
         post: {
             type: Object,
             required: true
         }
-    },
-    components: { DefaultButton }
+    }
 }
 </script>
 
